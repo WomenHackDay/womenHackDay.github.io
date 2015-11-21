@@ -14,8 +14,7 @@ var teams = [{
 
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope, $http) {
-    //$http.get("http://127.0.0.1:5000/rest/contests/projecteuler/leaderboard?offset=0&limit=50")
-    $http.get("a.json")
+    $http.get("data.json")
         .success(function(response) {
             $scope.sb = [];
             names = teams.map(function(x) {

@@ -31,44 +31,49 @@
             <div class="col-md-10" align="center">
             </div>
             <div class="col-md-2" style="font-family:verdana;" align="center">
-N° of Users: {{num_users}}
+                N° of Users: {{num_users}}
             </div>
-        </div><br>
-<div align="center">
-        <div class="row" style="font-family:verdana; margin-top:0px; padding-top:20px; border: 1px solid #DDD; background-color: #FFF;">
-            <div class="col-md-1" align="center">
-            </div>
-            <div class="col-md-1" align="center">
-<b>Rank</b>
-            </div>
-            <div class="col-md-4">
-<b>User</b>
-            </div>
-            <div class="col-md-2">
-<b>Score</b>
-            </div>
-            <div class="col-md-4">
-<b>Last Submit</b>
-            </div><br><br>
         </div>
-        <div class="row" style="font-family:verdana; margin-top:1px; padding-top:12px; border: 1px solid #DDD; background-color: #F7F7F7;" ng-repeat="e in sb">
-            <div class="col-md-1" align="center">
+        <br>
+        <div align="center">
+            <div class="row" style="font-family:verdana; margin-top:0px; padding-top:20px; border: 1px solid #DDD; background-color: #FFF;">
+                <div class="col-md-1" align="center">
+                </div>
+                <div class="col-md-1" align="center">
+                    <b>Rank</b>
+                </div>
+                <div class="col-md-4">
+                    <b>User</b>
+                </div>
+                <div class="col-md-2">
+                    <b>Score</b>
+                </div>
+                <div class="col-md-4">
+                    <b>Last Submit</b>
+                </div>
+                <br>
+                <br>
             </div>
-            <div class="col-md-1" align="center">
-{{ $index + 1 }}
+            <div class="row" style="font-family:verdana; margin-top:1px; padding-top:12px; border: 1px solid #DDD; background-color: #F7F7F7;" ng-repeat="e in sb">
+                <div class="col-md-1" align="center">
+                </div>
+                <div class="col-md-1" align="center">
+                    {{ $index + 1 }}
+                </div>
+                <div class="col-md-4">
+                    {{ e.hacker }}
+                </div>
+                <div class="col-md-2">
+                    {{ e.score }}
+                </div>
+                <div class="col-md-4">
+                    {{ e.submitted_at }}
+                </div>
+                <br>
+                <br>
             </div>
-            <div class="col-md-4">
-{{ e.hacker }}
-            </div>
-            <div class="col-md-2">
-{{ e.score }}
-            </div>
-            <div class="col-md-4">
-{{ e.submitted_at }}
-            </div><br><br>
         </div>
-</div>
-</div>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
