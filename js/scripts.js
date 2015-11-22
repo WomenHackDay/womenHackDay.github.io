@@ -12,6 +12,10 @@ var teams = [{
     "bonus": 0
 }];
 
+var clock = new FlipClock($('.clock'), {});
+clock.setTime(3600);
+clock.setCountdown(true);
+
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope, $http) {
     $http.get("data.json")
