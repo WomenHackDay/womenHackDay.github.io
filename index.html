@@ -2,6 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Women Hack Day</title>
+        <script>
+            if (window.location.protocol != "http:")
+            window.location.href = "http:" + window.location.href.substring(window.location.protocol.length);
+        </script>
         <style type="text/css">
             body, html
             {
