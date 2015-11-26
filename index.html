@@ -1,91 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Women Hack Day</title>
+        <style type="text/css">
+            body, html
+            {
+                margin: 0; padding: 0; height: 100%; overflow: hidden;
+            }
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Women Hack Day</title>
-    <script>
-        if (window.location.protocol != "http:")
-        window.location.href = "http:" + window.location.href.substring(window.location.protocol.length);
-    </script>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/flipclock.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <script src="js/angular.min.js"></script>
-</head>
-
-<body ng-app="myApp" ng-controller="customersCtrl">
-    <nav class="navbar navbar-inverse">
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-            <ul class="nav navbar-nav">
-                <a class="navbar-brand" href=""><i>Women Hack Day</i></a>
-            </ul>
-            <ul class="nav navbar-nav navbar-left">
-                <li class="active"><a href="#">Challenges</a></li>
-            </ul>
+            #content
+            {
+                position:absolute; left: 0; right: 0; bottom: 0; top: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <iframe width="100%" height="100%" frameborder="0" src="http://196.203.111.173:8000" />
         </div>
-    </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3" align="center">
-            </div>
-            <div class="col-md-6" align="center">
-                <div class="clock"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-10" align="center">
-            </div>
-            <div class="col-md-2" style="font-family:verdana;" align="center">
-                N° of Users: {{num_users}}
-            </div>
-        </div>
-        <br>
-        <div align="center">
-            <div class="row" style="font-family:verdana; margin-top:0px; padding-top:20px; border: 1px solid #DDD; background-color: #FFF;">
-                <div class="col-md-1" align="center">
-                </div>
-                <div class="col-md-1" align="center">
-                    <b>Rank</b>
-                </div>
-                <div class="col-md-4">
-                    <b>User</b>
-                </div>
-                <div class="col-md-2">
-                    <b>Score</b>
-                </div>
-                <div class="col-md-4">
-                    <b>Last Submit</b>
-                </div>
-                <br>
-                <br>
-            </div>
-            <div class="row" style="font-family:verdana; margin-top:1px; padding-top:12px; border: 1px solid #DDD; background-color: #F7F7F7;" ng-repeat="e in sb">
-                <div class="col-md-1" align="center">
-                </div>
-                <div class="col-md-1" align="center">
-                    {{ $index + 1 }}
-                </div>
-                <div class="col-md-4">
-                    {{ e.hacker }}
-                </div>
-                <div class="col-md-2">
-                    {{ e.score }}
-                </div>
-                <div class="col-md-4">
-                    {{ e.submitted_at }}
-                </div>
-                <br>
-                <br>
-            </div>
-        </div>
-    </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/flipclock.min.js"></script>
-    <script src="js/scripts.js"></script>
-</body>
-
+    </body>
 </html>
