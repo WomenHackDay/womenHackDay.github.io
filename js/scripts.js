@@ -1,5 +1,7 @@
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope, $http, $timeout) {
+    $scope.sb = [];
+    $scope.num_users = $scope.sb.length;
     (function tick() {
         $http.get("http://196.203.111.173:443/?offset=0&limit=1000")
         //$http.get("data.json")
