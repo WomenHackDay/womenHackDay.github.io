@@ -1,24 +1,8 @@
-var teams = [{
-    "name": "ModularPrime",
-    "bonus": 0
-}, {
-    "name": "goalboy",
-    "bonus": 0
-}, {
-    "name": "lcchen",
-    "bonus": 0
-}, {
-    "name": "qlimaxx",
-    "bonus": 0
-}];
-
-var clock = new FlipClock($('.clock'), {});
-clock.setTime(3600);
-clock.setCountdown(true);
-
 var app = angular.module('myApp', []);
-app.controller('customersCtrl', function($scope, $http) {
-    $http.get("data.json")
+app.controller('customersCtrl', function($scope, $http, $timeout) {
+    (function tick() {
+        $http.get("http://196.203.111.173:443/?offset=0&limit=1000")
+        //$http.get("data.json")
         .success(function(response) {
             $scope.sb = [];
             names = teams.map(function(x) {
@@ -40,5 +24,26 @@ app.controller('customersCtrl', function($scope, $http) {
                 }
             });
             $scope.num_users = $scope.sb.length;
+            $timeout(tick, 10000);
         });
+    })();
 });
+
+var end = 1448730000;
+var clock = new FlipClock($('.clock'), {});
+clock.setTime(end - Math.floor(Date.now()/1000));
+clock.setCountdown(true);
+
+var teams = [{
+    "name": "ModularPrime",
+    "bonus": 0
+}, {
+    "name": "goalboy",
+    "bonus": 0
+}, {
+    "name": "lcchen",
+    "bonus": 0
+}, {
+    "name": "qlimaxx",
+    "bonus": 0
+}];
